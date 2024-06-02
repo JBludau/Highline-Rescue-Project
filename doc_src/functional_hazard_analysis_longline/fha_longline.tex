@@ -263,7 +263,7 @@ Humans perform some of the mitigation that is identified by the analysis. Theref
 This phase starts when the systems rotorcraft+rescuer+longline interacts with the systems patient+highline. This includes aerodynamic interactions (e.g. downwash onto highline). 
 
 Risks that originate solely from using a rotorcraft+rescuer+longline during the approach are \textbf{not} included here.
-
+%1.1
 \fhaTable[fhaSystemKeyValue=
 			Rotorcraft,
 		 fhaFunctionKeyValue=
@@ -282,7 +282,33 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     	{
 	     	\tabitem abrasion-resistant tubing around highline and backup \\
 	     	\tabitem Highline with abrasion-resistant ropes as backup \\
-	     	\tabitem Approach of the rotorcraft to the highline from the side to which it can depart while autorotating at all times \\
+	     	\tabitem Approach of the rotorcraft to the highline from the side to which it can depart while \\ autorotating at all times
+	     	},
+	     fhaCritPostKeyValue=
+	     	{\textcolor{orange}{medium}, as the tubing prevents abrasion of main line and backup. \\
+	     	 With ropes as backups, it is less prone to damage from hitting objects. \\ 
+	     	 Approach from the departure side allows the rotorcraft to cancel the rescue and depart at all times.}
+	     	]
+
+%1.2
+\fhaTable[fhaSystemKeyValue=
+			Rotorcraft,
+		 fhaFunctionKeyValue=
+		 	Positioning,
+	     fhaCritPreKeyValue=
+	     	\textcolor{red}{high},
+	     fhaNumberKeyValue=
+	     	1.2,
+	     fhaCausesKeyValue=
+	     	{e.g. approaching to low/left/right relative to patient, present turbulence, recirculation, etc.},
+	     fhaDescriptionKeyValue=
+	     	{During the positioning of the rescuer relative to the patient abrasive contact between \\ longline and highline is possible. 
+	     	This could damage the main line. \\ Furthermore, the contact between longline and highline \\ might change the handling quality of the rotorcraft},
+	     fhaMitigationKeyValue=
+	     	{
+	     	\tabitem abrasion-resistant tubing around highline and backup \\
+	     	\tabitem Highline with abrasion-resistant ropes as backup \\
+	     	\tabitem Canceling the rescue mission if the pilot or rescuer have concerns
 	     	},
 	     fhaCritPostKeyValue=
 	     	{\textcolor{orange}{medium}, as the tubing prevents abrasion of main line and backup. \\
