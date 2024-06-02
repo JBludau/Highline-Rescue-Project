@@ -6,6 +6,11 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{makecell}
+\usepackage{nicematrix}
+\usepackage{xkeyval}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
 
 \usepackage{subfig}
 \usepackage{graphicx}
@@ -29,6 +34,109 @@
 \title{Functional Hazard Analysis of a Helicopter-based Highline Rescue Using a Longline}
 
 \author{Version 1.1 by Jakob Bludau, Aaron Benkert, and Lukas Irmler}
+
+%define fha table
+\makeatletter
+\def\fhaSystem{Fill in cell}
+\def\fhaFunction{Fill in cell}
+\def\fhaCriticalityPre{Fill in cell}
+\def\fhaNumber{Fill in cell}
+\def\fhaCauses{Fill in cell}
+\def\fhaDescription{Fill in cell}
+\def\fhaMitigation{Fill in cell}
+\def\fhaCriticalityPost{Fill in cell}
+
+%\define@key{fhaSystemKey}{fhaSystemKeyValue}{%
+%    \def\fhaSystem{#1}%
+%}
+%\define@key{fhaFunctionKey}{fhaFunctionKeyValue}{%
+%    \def\fhaFunction{#1}%
+%}
+%\define@key{fhaCritPreKey}{fhaCritPreKeyValue}{%
+%    \def\fhaCriticalityPre{#1}%
+%}
+%\define@key{fhaNumberKey}{fhaNumberKeyValue}{%
+%    \def\fhaNumber{#1}%
+%}
+%\define@key{fhaCausesKey}{fhaCausesKeyValue}{%
+%    \def\fhaCauses{#1}%
+%}
+%\define@key{fhaDescriptionKey}{fhaDescriptionKeyValue}{%
+%    \def\fhaDescription{#1}%
+%}
+%\define@key{fhaMitigationKey}{fhaMitigationKeyValue}{%
+%    \def\fhaMitigation{#1}%
+%}
+%\define@key{fhaCritPostKey}{fhaCritPostKeyValue}{%
+%    \def\fhaCriticalityPost{#1}%
+%}
+
+\define@key{fhaKey}{fhaSystemKeyValue}{%
+    \def\fhaSystem{#1}%
+}
+\define@key{fhaKey}{fhaFunctionKeyValue}{%
+    \def\fhaFunction{#1}%
+}
+\define@key{fhaKey}{fhaCritPreKeyValue}{%
+    \def\fhaCriticalityPre{#1}%
+}
+\define@key{fhaKey}{fhaNumberKeyValue}{%
+    \def\fhaNumber{#1}%
+}
+\define@key{fhaKey}{fhaCausesKeyValue}{%
+    \def\fhaCauses{#1}%
+}
+\define@key{fhaKey}{fhaDescriptionKeyValue}{%
+    \def\fhaDescription{#1}%
+}
+\define@key{fhaKey}{fhaMitigationKeyValue}{%
+    \def\fhaMitigation{#1}%
+}
+\define@key{fhaKey}{fhaCritPostKeyValue}{%
+    \def\fhaCriticalityPost{#1}%
+}
+
+
+
+\makeatother
+
+\newcommand\fhaTable[1][]{
+% Grouping makes sure that later calls get the default values rather than
+% the values from the last table
+\begingroup 
+% This parses the optional key-value parameters and runs the defined macros
+% for each
+\setkeys{fhaKey}{#1}
+% Standard table with the macros used here
+%\begin{table}
+%    \centering
+%    \begin{tabular}{c c c c c c c c c}
+%    \hline
+%    a & b & c & d & e & f & g & h  \\
+%    \hline
+%    \fhaSystem & \fhaFunction & \fhaCriticalityPre & \fhaNumber & \fhaCauses & \fhaDescription & \fhaMitigation & \fhaCriticalityPost \\
+%    \end{tabular}
+%\end{table}
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|p{0.18\textwidth}|p{0.18\textwidth}|p{0.18\textwidth}|p{0.18\textwidth}|}
+%\Body 
+\hline
+\makecell[l]{\tiny{\textcolor{gray}{System:}} \\ \fhaSystem} & \makecell[l]{\tiny{\textcolor{gray}{Affected function:}} \\  \fhaFunction } & \makecell[l]{\tiny{\textcolor{gray}{Criticality:}} \\ \fhaCriticalityPre} &  \makecell[l]{\tiny{\textcolor{gray}{Number:}} \\ \fhaNumber }\\
+\hline
+\multicolumn{4}{|l|}{\makecell[l]{\tiny{\textcolor{gray}{Possible causes:}} \\  \fhaCauses}} \\
+\hline
+\multicolumn{4}{|l|}{\makecell[l]{\tiny{\textcolor{gray}{Description:}} \\ \fhaDescription}} \\
+\hline
+\multicolumn{4}{|l|}{\makecell[l]{\tiny{\textcolor{gray}{Mitigation:}} \\ \fhaMitigation}} \\
+\hline
+\multicolumn{4}{|l|}{\makecell[l]{\tiny{\textcolor{gray}{Criticality with mitigation:}} \\ \fhaCriticalityPost}} \\
+\hline
+\end{tabular}
+\end{table}
+% end of the group, replaces the changes to the key macros with default values
+\endgroup
+}
 
 
 
@@ -148,6 +256,39 @@ Table \ref{tab:func} gives the functions of the individual systems:
 The analysis does not differentiate between different causes of a failure of the rotorcaft to provide the functions \textbf{load bearing} and \textbf{positioning}. The rotorcaft corresponds to a black box system that can change the position in 3D space and lift a load (load bearing). In case of an emergency the rotorcraft can drop the longline.
 
 Humans perform some of the mitigation that is identified by the analysis. Therefore, the three roles \textcolor{teal}{rescuer}, \textcolor{purple}{patient}, and external \textcolor{blue}{observer} are defined. All humans involved in the training are connected via a shared radio.
+
+\subsection{Phase 1: Approach and Positioning}
+\label{sec:fha:phase1}
+
+This phase starts when the systems rotorcraft+rescuer+longline interacts with the systems patient+highline. This includes aerodynamic interactions (e.g. downwash onto highline). 
+
+Risks that originate solely from using a rotorcraft+rescuer+longline during the approach are \textbf{not} included here.
+
+\fhaTable[fhaSystemKeyValue=
+			Rotorcraft,
+		 fhaFunctionKeyValue=
+		 	Load bearing,
+	     fhaCritPreKeyValue=
+	     	\textcolor{red}{high},
+	     fhaNumberKeyValue=
+	     	1.1,
+	     fhaCausesKeyValue=
+	     	Power or control deficit of rotorcraft,
+	     fhaDescriptionKeyValue=
+	     	{A power or control deficit of the rotorcraft during the positioning of the rescuer relative \\
+	     	 to the patient can occur, which causes the rotorcraft to loose height. \\ 
+	     	 This poses the risk of unintended contact between longline and highline.},
+	     fhaMitigationKeyValue=
+	     	{
+	     	\tabitem abrasion-resistant tubing around highline and backup \\
+	     	\tabitem Highline with abrasion-resistant ropes as backup \\
+	     	\tabitem Approach of the rotorcraft to the highline from the side to which it can depart while autorotating at all times \\
+	     	},
+	     fhaCritPostKeyValue=
+	     	{\textcolor{orange}{medium}, as the tubing prevents abrasion of main line and backup. \\
+	     	 With ropes as backups, it is less prone to damage from hitting objects. \\ 
+	     	 Approach from the departure side allows the rotorcraft to cancel the rescue and depart at all times.}
+	     	]
 
 
 \section{Modified highline setup for training}
