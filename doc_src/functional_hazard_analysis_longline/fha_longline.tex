@@ -5,6 +5,7 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{makecell}
 
 \usepackage{subfig}
 \usepackage{graphicx}
@@ -86,6 +87,68 @@ The main and backup lines go through a closed metal loop called the leash ring. 
 
 \section{Functional hazard analysis and risk mitigation for a safe training setting}
 \label{sec:fha}
+
+Two outstanding dangers are present during all phases of the rescue:
+\begin{itemize}
+\item The backup line, which is a secondary line that runs parallel to the main line, is a crucial component in the rescue operation. It serves as a safety measure in case the main line fails. However, it's important to note that the backup line can also pose a potential danger of entanglement, as its loops can wrap around arms, legs, or material (on the harness, the longline rig, etc.). This can lead to complex problems that are difficult to solve. In a training environment, the use of a tubular material that both main line and backup go through is essential to eliminate the danger of entanglement.
+\item In the event of a main line rupture, the line snaps back towards the anchors. This snapping action is more pronounced in what we refer to as ``high slack settings'', which are situations where there is a significant amount of slack in the line. To reduce the risk of line rupture, the slack of a training line is reduced by increasing the tension in the main line. This, in turn, increases the distance between the main line and the rotorcraft, minimizing the potential for the line to snap back towards the rotorcraft.
+\end{itemize} 
+
+The following Functional Hazard Analysis lists the risks of every procedure phase separately. It distinguishes between the functional systems \textit{rotorcraft}, \textit{longline}, \textit{harness}, \textit{leash}, \textit{rescuer}, and \textit{highline}. As the patient might be unconscious,   no functions are associated. 
+
+
+The risks result from errors/inabilities of the listed systems during the rescue phases. This document lists the expected criticality of the identified risks in all phases of the rescue and proposes mitigation to create a safe training environment. 
+
+
+The text uses \textit{highline} for the system composed of the two anchors, the main and backup line, and the leash ring as this system fulfills the functions \textbf{load bearing} and \textbf{psotitioning} as a single unit. Nevertheless, the risk lists a breakdown in the description if necessary. 
+
+
+This document gives the criticality of a risk on three levels \textcolor{green}{low}, \textcolor{orange}{medium}, and \textcolor{red}{high}. The levels encode the complexity that a solution to the problem requires and the potential harm for rescuers, patients, and rotorcraft. Table \ref{tab:crit} gives the different levels.
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{ c | c | c }
+ criticality & complexity of solution & potential harm \\ 
+ \hline
+ \hline 
+ \textcolor{green}{low} & no actions necessary & none \\ 
+ \hline
+ \textcolor{orange}{medium} & 1-2 simple steps, visual check, known communication & small bruises on arms or legs \\ 
+ \hline
+ \textcolor{red}{high} & \makecell{cutting, thinking thinking, \\ spontaneous problem solving/communication} & \makecell{everything more than \\ small bruises on arms or legs} \\  
+   
+\end{tabular}
+\caption{Levels of criticality described by their complexity and potential harm.}
+\label{tab:crit}
+\end{table}
+
+Table \ref{tab:func} gives the functions of the individual systems:
+\begin{table}[!ht]
+\centering
+\begin{tabular}{ c | c  }
+ system & function \\ 
+ \hline
+ \hline 
+ rotorcraft & \makecell{load bearing \\ positioning (with help of rescuer)} \\
+ \hline 
+ rescuer & \makecell{positioning (self,rotatoric) \\ positioning (self,translatoric) \\ attaching patient to longline \\ cutting connection patient to highline} \\
+ \hline
+ longline & load bearing \\
+ \hline
+ highline & \makecell{load bearing \\ positioning} \\
+ \hline
+ leash & load bearing \\
+ \hline
+ harness (patient) & load bearing \\ 
+\end{tabular}
+\caption{Systems and respective functions.}
+\label{tab:func}
+\end{table}
+
+The analysis does not differentiate between different causes of a failure of the rotorcaft to provide the functions \textbf{load bearing} and \textbf{positioning}. The rotorcaft corresponds to a black box system that can change the position in 3D space and lift a load (load bearing). In case of an emergency the rotorcraft can drop the longline.
+
+Humans perform some of the mitigation that is identified by the analysis. Therefore, the three roles \textcolor{teal}{rescuer}, \textcolor{purple}{patient}, and external \textcolor{blue}{observer} are defined. All humans involved in the training are connected via a shared radio.
+
 
 \section{Modified highline setup for training}
 \label{sec:modified}
