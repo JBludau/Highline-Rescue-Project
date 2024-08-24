@@ -263,7 +263,7 @@ Humans perform some of the mitigation that is identified by the analysis. Theref
 This phase starts when the systems rotorcraft+rescuer+longline interacts with the systems patient+highline. This includes aerodynamic interactions (e.g. downwash onto highline). 
 
 Risks that originate solely from using a rotorcraft+rescuer+longline during the approach are \textbf{not} included here.
-
+%1.1
 \fhaTable[fhaSystemKeyValue=
 			Rotorcraft,
 		 fhaFunctionKeyValue=
@@ -282,7 +282,7 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     	{
 	     	\tabitem abrasion-resistant tubing around highline and backup \\
 	     	\tabitem Highline with abrasion-resistant ropes as backup \\
-	     	\tabitem Approach of the rotorcraft to the highline from the side to which it can depart while autorotating at all times \\
+	     	\tabitem Approach of the rotorcraft to the highline from the side to which it can depart while \\ autorotating at all times
 	     	},
 	     fhaCritPostKeyValue=
 	     	{\textcolor{orange}{medium}, as the tubing prevents abrasion of main line and backup. \\
@@ -290,6 +290,94 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     	 Approach from the departure side allows the rotorcraft to cancel the rescue and depart at all times.}
 	     	]
 
+%1.2
+\fhaTable[fhaSystemKeyValue=
+			Rotorcraft,
+		 fhaFunctionKeyValue=
+		 	Positioning,
+	     fhaCritPreKeyValue=
+	     	\textcolor{red}{high},
+	     fhaNumberKeyValue=
+	     	1.2,
+	     fhaCausesKeyValue=
+	     	{e.g. approaching to low/left/right relative to patient, present turbulence, recirculation, etc.},
+	     fhaDescriptionKeyValue=
+	     	{During the positioning of the rescuer relative to the patient abrasive contact between \\ longline and highline is possible. 
+	     	This could damage the main line. \\ Furthermore, the contact between longline and highline \\ might change the handling quality of the rotorcraft},
+	     fhaMitigationKeyValue=
+	     	{
+	     	\tabitem abrasion-resistant tubing around highline and backup \\
+	     	\tabitem Highline with abrasion-resistant ropes as backup \\
+	     	\tabitem Canceling the rescue mission if the pilot or rescuer have concerns
+	     	},
+	     fhaCritPostKeyValue=
+	     	{\textcolor{orange}{medium}, as the tubing prevents abrasion of main line and backup. \\
+	     	 With ropes as backups, it is less prone to damage from hitting objects. \\ 
+	     	 Approach from the departure side allows the rotorcraft to cancel the rescue and depart at all times.}
+	     	]
+
+%1.3
+\fhaTable[fhaSystemKeyValue=
+			\textcolor{teal}{Rescuer},
+		 fhaFunctionKeyValue=
+		 	Positioning (transl.),
+	     fhaCritPreKeyValue=
+	     	\textcolor{red}{high},
+	     fhaNumberKeyValue=
+	     	1.3,
+	     fhaCausesKeyValue=
+	     	{\textcolor{teal}{Rescuer} positions him/herself on wrong side of highline, thus preventing an \\ 
+	     	 unhindered departure of the rotorcraft.\\
+	     	 Rappel device can get entangled in the highline or backup},
+	     fhaDescriptionKeyValue=
+	     	{During the rappel of the \textcolor{teal}{rescuer} he/she could end on the side of the highline that does not correspond \\
+	     	 to the departure direction of the rotorcraft, which prevents the rotorcraft from departuring unhindered.\\
+	     	  When rappelling to far, the longline might be pulled vertically along the line which is discussed in 1.2},
+	     fhaMitigationKeyValue=
+	     	{
+	     	\tabitem Communication between pilot and \textcolor{teal}{rescuer}, slow approach\\
+	     	\tabitem Rappel with variable longline on departure side of highline \\
+	     	\tabitem \textcolor{purple}{Patient}, and external \textcolor{blue}{observer} intervene on radio in case of rappel errors
+	     	},
+	     fhaCritPostKeyValue=
+	     	{\textcolor{orange}{medium}, as the approach to the patient is similar to other maneuvers. \\
+	     	 \textcolor{purple}{Patient}, and external \textcolor{blue}{observer} can observe and intervene from different viewpoints \\ 
+	     	 \textcolor{teal}{Rescuer} can reach rappel device and remove connections with the highline}
+	     	]
+	     	
+%1.4
+\fhaTable[fhaSystemKeyValue=
+			\textcolor{teal}{Rescuer},
+		 fhaFunctionKeyValue=
+		 	Positioning (rot.),
+	     fhaCritPreKeyValue=
+	     	\textcolor{red}{high},
+	     fhaNumberKeyValue=
+	     	1.4,
+	     fhaCausesKeyValue=
+	     	{\textcolor{teal}{Rescuer} and \textcolor{purple}{patient} are in contact, wake of rotorcraft causes twisting of rescuer and patient.\\
+	     	 This results in longline and leash being twisted, at extreme connecting both.\\
+	     	 },
+	     fhaDescriptionKeyValue=
+	     	{During the contact of \textcolor{teal}{rescuer} and \textcolor{purple}{patient}, a unwanted twist of leash and longline could end in\\
+	     	 an unwanted connection of the rotorcraft to the highline.\\
+	     	 Depending on the number of twists, untangling can require extensive work.\\
+	     	 Furthermore, the twisted ropes can prevent further rappelling or lifting of the rescuer\\
+	     	 relative to the patient},
+	     fhaMitigationKeyValue=
+	     	{
+	     	\tabitem \textcolor{teal}{Rescuer} grabs \textcolor{purple}{patient} with legs\\
+	     	\tabitem Manually distancing leash and longline helps to prevent twisting \\
+	     	\tabitem \textcolor{purple}{Patient}, and external \textcolor{blue}{observer} intervene on radio in case of dangerous twisting
+	     	},
+	     fhaCritPostKeyValue=
+	     	{\textcolor{orange}{medium}, as the patient can intervene and push leash and longline apart which prevents the twisting.
+	     	}
+	     	]
+
+\newpage
+
+The functions ``Connecting patient's harness'' and ``Cutting of the connection between patient and highline'' must not be executed during this phase of the rescue. Any attempt to do so must result in an immediate abort of the procedure.
 
 \section{Modified highline setup for training}
 \label{sec:modified}
