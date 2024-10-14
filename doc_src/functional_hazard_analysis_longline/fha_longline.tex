@@ -8,6 +8,7 @@
 \usepackage{makecell}
 \usepackage{nicematrix}
 \usepackage{xkeyval}
+\usepackage{pdflscape}
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
@@ -260,9 +261,9 @@ Humans perform some of the mitigation that is identified by the analysis. Theref
 \subsection{Phase 1: Approach and Positioning}
 \label{sec:fha:phase1}
 
-This phase starts when the systems rotorcraft+rescuer+longline interacts with the systems patient+highline. This includes aerodynamic interactions (e.g. downwash onto highline). 
+This phase starts when the systems rotorcraft+\textcolor{teal}{rescuer}+longline interacts with the systems \textcolor{purple}{patient}+highline. This includes aerodynamic interactions (e.g. downwash onto highline). 
 
-Risks that originate solely from using a rotorcraft+rescuer+longline during the approach are \textbf{not} included here.
+Risks that originate solely from using a rotorcraft+\textcolor{teal}{rescuer}+longline during the approach are \textbf{not} included here.
 %1.1
 \fhaTable[fhaSystemKeyValue=
 			Rotorcraft,
@@ -275,8 +276,8 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     fhaCausesKeyValue=
 	     	Power or control deficit of rotorcraft,
 	     fhaDescriptionKeyValue=
-	     	{A power or control deficit of the rotorcraft during the positioning of the rescuer relative \\
-	     	 to the patient can occur, which causes the rotorcraft to loose height. \\ 
+	     	{A power or control deficit of the rotorcraft during the positioning of the \textcolor{teal}{rescuer} relative \\
+	     	 to the \textcolor{purple}{patient} can occur, which causes the rotorcraft to loose height. \\ 
 	     	 This poses the risk of unintended contact between longline and highline.},
 	     fhaMitigationKeyValue=
 	     	{
@@ -300,15 +301,15 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     fhaNumberKeyValue=
 	     	1.2,
 	     fhaCausesKeyValue=
-	     	{e.g. approaching to low/left/right relative to patient, present turbulence, recirculation, etc.},
+	     	{e.g. approaching to low/left/right relative to \textcolor{purple}{patient}, present turbulence, recirculation, etc.},
 	     fhaDescriptionKeyValue=
-	     	{During the positioning of the rescuer relative to the patient abrasive contact between \\ longline and highline is possible. 
+	     	{During the positioning of the \textcolor{teal}{rescuer} relative to the \textcolor{purple}{patient} abrasive contact between \\ longline and highline is possible. 
 	     	This could damage the main line. \\ Furthermore, the contact between longline and highline \\ might change the handling quality of the rotorcraft},
 	     fhaMitigationKeyValue=
 	     	{
 	     	\tabitem abrasion-resistant tubing around highline and backup \\
 	     	\tabitem Highline with abrasion-resistant ropes as backup \\
-	     	\tabitem Canceling the rescue mission if the pilot or rescuer have concerns
+	     	\tabitem Canceling the rescue mission if the pilot or \textcolor{teal}{rescuer} have concerns
 	     	},
 	     fhaCritPostKeyValue=
 	     	{\textcolor{orange}{medium}, as the tubing prevents abrasion of main line and backup. \\
@@ -340,7 +341,7 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     	\tabitem \textcolor{purple}{Patient}, and external \textcolor{blue}{observer} intervene on radio in case of rappel errors
 	     	},
 	     fhaCritPostKeyValue=
-	     	{\textcolor{orange}{medium}, as the approach to the patient is similar to other maneuvers. \\
+	     	{\textcolor{orange}{medium}, as the approach to the \textcolor{purple}{patient} is similar to other maneuvers. \\
 	     	 \textcolor{purple}{Patient}, and external \textcolor{blue}{observer} can observe and intervene from different viewpoints \\ 
 	     	 \textcolor{teal}{Rescuer} can reach rappel device and remove connections with the highline}
 	     	]
@@ -355,15 +356,15 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     fhaNumberKeyValue=
 	     	1.4,
 	     fhaCausesKeyValue=
-	     	{\textcolor{teal}{Rescuer} and \textcolor{purple}{patient} are in contact, wake of rotorcraft causes twisting of rescuer and patient.\\
+	     	{\textcolor{teal}{Rescuer} and \textcolor{purple}{patient} are in contact, wake of rotorcraft causes twisting of \textcolor{teal}{rescuer} and \textcolor{purple}{patient}.\\
 	     	 This results in longline and leash being twisted, at extreme connecting both.\\
 	     	 },
 	     fhaDescriptionKeyValue=
 	     	{During the contact of \textcolor{teal}{rescuer} and \textcolor{purple}{patient}, a unwanted twist of leash and longline could end in\\
 	     	 an unwanted connection of the rotorcraft to the highline.\\
 	     	 Depending on the number of twists, untangling can require extensive work.\\
-	     	 Furthermore, the twisted ropes can prevent further rappelling or lifting of the rescuer\\
-	     	 relative to the patient},
+	     	 Furthermore, the twisted ropes can prevent further rappelling or lifting of the \textcolor{teal}{rescuer}\\
+	     	 relative to the \textcolor{purple}{patient}},
 	     fhaMitigationKeyValue=
 	     	{
 	     	\tabitem \textcolor{teal}{Rescuer} grabs \textcolor{purple}{patient} with legs\\
@@ -371,7 +372,7 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 	     	\tabitem \textcolor{purple}{Patient}, and external \textcolor{blue}{observer} intervene on radio in case of dangerous twisting
 	     	},
 	     fhaCritPostKeyValue=
-	     	{\textcolor{orange}{medium}, as the patient can intervene and push leash and longline apart which prevents the twisting.
+	     	{\textcolor{orange}{medium}, as the \textcolor{purple}{patient} can intervene and push leash and longline apart which prevents the twisting.
 	     	}
 	     	]
 
@@ -379,10 +380,639 @@ Risks that originate solely from using a rotorcraft+rescuer+longline during the 
 
 The functions ``Connecting patient's harness'' and ``Cutting of the connection between patient and highline'' must not be executed during this phase of the rescue. Any attempt to do so must result in an immediate abort of the procedure.
 
+%1.5
+\fhaTable[fhaSystemKeyValue={dew},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={1.5},
+	     fhaCausesKeyValue={Helicopter has to release rope}, 
+	     fhaDescriptionKeyValue={During the positioning of the \textcolor{teal}{rescuer} to the \textcolor{purple}{patient} by helicopter,\\
+	      it may be necessary to use the rope incl.\\
+	       This could put strain on the highline from the falling rope and \textcolor{teal}{rescuer}.\\
+	       The problem is that the highline can be subjected to multiple impacts by the falling \textcolor{teal}{rescuer} and rope.\\
+	        In addition, the weight of the \textcolor{teal}{rescuer}
+could pull the rope over the highline and cause considerable friction damage.}, 
+	     fhaMitigationKeyValue={\tabitem Abrasion-resistant coating of line and backups \\
+	     \tabitem Line construction with multiple backups made of core-sheath ropes\\
+	     \tabitem Avoid having \textcolor{teal}{rescuer} and helicopters on different sides of the highline \\},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as the sheath prevents friction damage to the line. Damage caused by hitting can be mitigated by the
+backups used.}]
+
+%1.6
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={1.6},
+	     fhaCausesKeyValue={Aerodynamic interaction of highline with helicopter downwash (rocking of the line in the wind)}, 
+	     fhaDescriptionKeyValue={Aerodynamic interaction between the helicopter and the highline is possible even before the \textcolor{teal}{rescuer} can reach the \textcolor{purple}{patient}.\\
+	      Since long highlines can swing strongly sideways and have little damping in this direction, this can prevent the helicopter from positioning the \textcolor{teal}{rescuer}
+with sufficient accuracy.\\
+Furthermore, the downwash can cause the loops of the highline backup to swing around and get caught in various places on the \textcolor{purple}{patient} or
+\textcolor{teal}{rescuer}.\\
+ These could have to be cut during the subsequent rescue process or could lead to unwanted tied-up situations.}, 
+	     fhaMitigationKeyValue={\tabitem Termination of the attempt in case of acute rocking of the highline \\
+	     \tabitem Hovering near highline to test aerodynamic interaction (careful approach)\\
+	     \tabitem Sheathing the highline and backups to eliminate loops\\
+	     \tabitem Tighten the highline more when setting up to reduce the amplitude},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as the formation of loops is prevented and a previously agreed, slow approach to positioning of the
+helicopter allows an abort at any time}]
+	     
+%1.7
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={1.7},
+	     fhaCausesKeyValue={Rockfall or other objects blown down by downwash}, 
+	     fhaDescriptionKeyValue={A falling stone, branch, carabiner, etc. is enough to cut the line under tension.\\
+	      This causes the \textcolor{purple}{patient} to fall into the backup and hang lower than in the line.\\
+	       Several objects could fall down in a row and also cut off the backup that is subsequently loaded.}, 
+	     fhaMitigationKeyValue={\tabitem Use of two core-sheath ropes as independent backups \\
+	      \tabitem The double backup distributes the load parallel to both strands\\ 
+	      \tabitem Cleaning the stands of loose stones and objects that could be thrown up\\},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, since a sequential cutting of line and two impact-resistant core-shell Ropes are considered very unlikely to be damaged by falling objects (since thecutting sensitivity also decreases with decreasing load)}]
+	     
+%1.8
+\fhaTable[fhaSystemKeyValue={Leash},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={1.8},
+	     fhaCausesKeyValue={No causes for spontaneous leash rupture known}, 
+	     fhaDescriptionKeyValue={Spontaneous tearing of the leash due to contact with a sharp object under load.\\
+	      This is generally completely eliminated by the construction of the normal leash made of climbing rope and enveloping tubular band with the same load capacity.\\
+	       However, it is included in the analysis because a simple leash can be used for easier cutting}, 
+	     fhaMitigationKeyValue={\tabitem Avoid sharp objects on harnesses/clothing of \textcolor{teal}{rescuer} and \textcolor{purple}{patient}\\
+	     • Additional self-belay loop that can be hung in the leash ring if required\\
+	     Leash shorter than the patient’s arm length so that the leash ring can be used even when sitting position can be easily reached},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}, but very unlikely. Even with a simple leash when using suitable clothing and harnesses and with due caution.}]
+
+\newpage
+
+A failure of the patient's and rescuer's climbing harness will not be discussed here, as this is considered unlikely when
+using current and undamaged harnesses.
+
+\subsection{Phase 2: Hanging the patient}
+\label{sec:fha:phase2}
+
+%2.1
+\fhaTable[fhaSystemKeyValue={helicopter},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.1},
+	     fhaCausesKeyValue={(Temporary) performance deficit of the helicopter}, 
+	     fhaDescriptionKeyValue={Before attaching the sling, this is described in 1.1. After attaching the sling (helicopter tied up), the rescuer's load can also be transferred to
+the highline via \\
+ the sling, \textcolor{purple}{patient} belt and leash if the helicopter accidentally loses altitude.\\
+  If the helicopter has to leave its hovering position during this phase, the sling can either be relieved and unhooked.\\
+   Alternatively, the rope can be dropped and the \textcolor{teal}{rescuer} falls into the highline together with the \textcolor{purple}{patient}.\\
+    However, the falling rope can pose a danger to both personnel and the highline (impact and friction load on the line).}, 
+	     fhaMitigationKeyValue={• Abrasion-resistant coating of line and backups\\
+	     \tabitem \textcolor{purple}{patient} and \textcolor{teal}{rescuer} wear an appropriate helmet\\
+	     \tabitem Line construction with multiple backups made of core-sheath ropes\\
+	     \tabitem Sufficient fall height under the highline for stretching by weight of two persons\\
+	     \tabitem Terrestrial rescue equipment and an easily accessible highline stand\\
+	     \tabitem Sufficient personnel with knowledge at the anchorage for a terrestrial rescue},
+	     fhaCritPostKeyValue={High. The sheathing prevents friction damage to the line. Damage caused by impact can be mitigated by the backups used.\\
+ Injury to people caused by the falling rope cannot be ruled out, but immediate, rapid rescue can be prepared.\\
+The helmet offers head protection. A sufficient fall height can be planned for when setting up.}]
+
+%2.2
+\fhaTable[fhaSystemKeyValue={helicopter},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.2},
+	     fhaCausesKeyValue={Tied-up helicopter steers the highline due to position fluctuations}, 
+	     fhaDescriptionKeyValue={During the positioning of the \textcolor{teal}{rescuer} to the \textcolor{purple}{patient} by the helicopter,\\
+	      relative movement with contact between the rope and the highline could occur for various reasons.\\
+	       This could cause friction damage to the highline. Furthermore, the contact between the line and the rope could affect the control behavior of the helicopter.\\
+	        In the most serious case, the rope could have to be released (in this case see 2.1)}, 
+	     fhaMitigationKeyValue={\tabitem Abrasion-resistant coating of line and backups\\
+	     \tabitem Line construction with multiple backups made of core-sheath ropes\\},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as the sheath prevents friction damage to the line.\\
+ Damage caused by hitting can be mitigated by the backups used. Dropping the rope does not cause the \textcolor{teal}{rescuer} to fall}]
+%2.3
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={positioning (transl.)},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.3},
+	     fhaCausesKeyValue={Flight \textcolor{teal}{rescuer} positions himself too far below \textcolor{purple}{patient} to attach \textcolor{purple}{patient} to rope.}, 
+	     fhaDescriptionKeyValue={Immediately after hooking in, the \textcolor{teal}{rescuer} can lower himself too far with the variable rope\\
+	      or hang below the \textcolor{purple}{patient} due to the helicopter losing altitude.\\
+	       This can be so far that the rope is relieved and \textcolor{purple}{patient} and \textcolor{teal}{rescuer} hang in a vertical line.\\
+	        In this state, twisting of the rope can no longer be effectively prevented with the leash.}, 
+	     fhaMitigationKeyValue={\tabitem Slow and economical lowering on the variable rope to avoid a too deep position to avoid hanging\\
+\tabitem Early warning of the pilot about any unintentional descent of the helicopter\\
+\tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early by warning on the radio (air \textcolor{teal}{rescuer} too low)\\
+\tabitem If the rope is relieved, the \textcolor{purple}{patient} grabs the highline to prevent twisting impede.},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as it can be prevented by the \textcolor{purple}{patient} with a short leash (highline within grasping distance).}]
+
+%2.4
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={positioning (rot.)},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.4},
+	     fhaCausesKeyValue={The \textcolor{teal}{rescuer} and \textcolor{purple}{patient} are in contact, the downwash from the helicopter causes them to twist and thus the rope and leash to twist.\\
+ The \textcolor{teal}{rescuer} does not take adequate action.}, 
+	     fhaDescriptionKeyValue={Even if the \textcolor{teal}{rescuer} is not positioned too low below the \textcolor{purple}{patient}, the leash and rope can become twisted.\\
+	      During the maneuver, the flight \textcolor{teal}{rescuer} should prevent this in order to avoid an unwanted restraint situation.}, 
+	     fhaMitigationKeyValue={
+	     \tabitem Air \textcolor{teal}{rescuer} safely grasps \textcolor{purple}{patient} with legs in case of contact\\
+	     \tabitem Twisting can be made more difficult by the \textcolor{teal}{rescuer} pushing the leash and rope apart.\\
+	     \tabitem After the \textcolor{purple}{patient} has been safely attached to the rope, \\
+	     the helicopter can create a horizontal distance of approximately one leash length between the line and the rope.\\
+ This makes the rope situation clearer and effectively prevents twisting. \\
+\tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early via radio warning},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}, as the \textcolor{purple}{patient} can intervene early and the twisting by grasping the highline can prevent.}]
+	     
+%2.5
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={Attaching the \textcolor{purple}{patient} belt in dew},
+	     fhaCritPreKeyValue={
+\textcolor{orange}{medium}},
+	     fhaNumberKeyValue={2.5},
+	     fhaCausesKeyValue={\textcolor{teal}{rescuer} hangs too low/high or too far to the side of the \textcolor{purple}{patient} to attach his belt to the rope}, 
+	     fhaDescriptionKeyValue={During the attachment, various readjustments of the position of the air \textcolor{teal}{rescuer} may be necessary in order to attach the \textcolor{purple}{patient}.\\
+	      This increases the time and thus the risk in this phase.\\
+	      Furthermore, the patient's belt may be attached incorrectly due to the lack of visibility on the patient belt/leahs/line/etc. }, 
+	     fhaMitigationKeyValue={ \tabitem \textcolor{purple}{patient} checks with partner whether he is correctly hooked in and communicates\\
+	      all related problems to the flight \textcolor{teal}{rescuer}},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}, since the \textcolor{purple}{patient} checks through a partner check according to the 4 eyes principle and in case Security breach feedback}]
+	     
+\newpage
+During this phase, the air \textcolor{teal}{rescuer} is not allowed to carry out the function “disconnecting the patient from the highline”. If the timing is incorrect, the \textcolor{purple}{patient} intervenes by issuing a warning on the radio.
+Since cases 2.1 and 2.2 already deal with the release of the rope in this phase, it will not be explicitly listed again here.
+
+
+%2.6
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.6},
+	     fhaCausesKeyValue={Aerodynamic interaction of highline with helicopter downwash (rocking of the line in the wind)}, 
+	     fhaDescriptionKeyValue={Aerodynamic interaction between the helicopter and the highline is possible even before the \textcolor{teal}{rescuer} can reach the \textcolor{purple}{patient}.\\
+	      Since long highlines can swing strongly sideways and have little damping in this direction, this can prevent the helicopter from positioning \\
+	      the \textcolor{teal}{rescuer} with sufficient accuracy.\\
+	       Furthermore, the downwash can cause the loops of the highline backup to swing around and get caught in various places on the \textcolor{purple}{patient} or \textcolor{teal}{rescuer}.\\
+	        These could have to be cut during the subsequent rescue process or could lead to unwanted tied-up situations.}, 
+	     fhaMitigationKeyValue={\tabitem Test for upward-swinging behaviour already in phase 1 (approach)\\
+	     \tabitem Sheathing of line and backup to prevent loops},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as the formation of loops is prevented and a swinging up in phase 1 can be tested by slow approach}]
+
+%2.7
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.7},
+	     fhaCausesKeyValue={Rockfall or other objects blown down by downwash}, 
+	     fhaDescriptionKeyValue={A falling stone, branch, carabiner, etc. is enough to cut the line under tension.\\
+	      As a result, the \textcolor{purple}{patient} suddenly falls into the sling and the line no longer supports his weight.\\
+	      This can lead to a high steering load for the pilot. The fall height is limited by the length of the connection between the rope and the patient belt}, 
+	     fhaMitigationKeyValue={\tabitem Cleaning the stands of loose stones and objects that could be thrown up \\
+	     \tabitem Prohibit actions near the highline that involve throwing/kicking off objects/etc. \\
+	     \tabitem Minimize the possible fall height of the \textcolor{purple}{patient} in the event of a line tear},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}. Very unlikely if the anchorages are cleaned sufficiently and the staff at the anchorages behave accordingly.\\
+In addition, the fall height can be kept small and the pilot can be prepared}]
+
+%2.8
+\fhaTable[fhaSystemKeyValue={Leash},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={2.8},
+	     fhaCausesKeyValue={Fall of two people in leash when releasing the rope}, 
+	     fhaDescriptionKeyValue={If the rope has to be released during this phase, the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} will fall into the patient's leash.}, 
+	     fhaMitigationKeyValue={\tabitem Avoid sharp objects on harnesses/clothing of \textcolor{teal}{rescuer} and \textcolor{purple}{patient}\\
+	     \tabitem Cutting tool for the leash cut remains secured in a holder\\
+	     \tabitem No unprotected, sharp objects on \textcolor{purple}{patient} and \textcolor{teal}{rescuer}},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}, but can easily be avoided by taking measures (use of suitable clothing and belts and appropriate caution).}]
+
+%2.9
+\fhaTable[fhaSystemKeyValue={belt},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{orange}{medium}},
+	     fhaNumberKeyValue={2.9},
+	     fhaCausesKeyValue={Fall of two people in leash when releasing the rope}, 
+	     fhaDescriptionKeyValue={If the rope has to be released in this phase, the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} fall into the patient's leash.\\
+	      The rescuer's load path is via the sling into the belay loop of the patient's harness.\\
+	       The leash is usually tied parallel to the belay ring (threaded through the loops of the belt part and the leg part of the harness, as when directly tying in a climbing rope).}, 
+	     fhaMitigationKeyValue={\tabitem Attach the sling to the leash attachment loop and to the patient harness attachment ring.\\
+	      If only one is possible: attach it to the leash attachment loop.\\
+	     \tabitem Checking that the \textcolor{purple}{patient} has correctly attached the sling\\},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}. Can be controlled very well through communication and the 4-eyes principle. However, a suitable communication
+channel is a prerequisite}]
+
+\subsection{Phase 3: Lifting to relieve the highline}
+\label{sec:fha:phase3}
+
+This phase begins after the \textcolor{purple}{patient} has been successfully hooked into the sling and the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} are lifted
+by the helicopter. The lifting is complete when the highline is (almost) free of load
+
+
+%3.1
+\fhaTable[fhaSystemKeyValue={helicopter},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.1},
+	     fhaCausesKeyValue={(Temporary) performance deficit of the helicopter}, 
+	     fhaDescriptionKeyValue={After attaching the sling (helicopter tied up), the rescuer's load can also be transferred to the highline via the sling, patient belt and leash if the helicopter accidentally loses altitude.\\
+	      The load is transferred from the highline gradually. However, if the helicopter stops transferring the load quickly, the highline can swing vertically (if the \textcolor{purple}{patient} and \textcolor{teal}{rescuer} fall quickly into the line).\\
+	       In this case, the rope could be periodically loaded and unloaded.\\
+	       However, since the \textcolor{purple}{patient} and \textcolor{teal}{rescuer} are still secured via the highline, releasing the rope does not lead to a person falling.}, 
+	     fhaMitigationKeyValue={\tabitem Abrasion-resistant coating of line and backups \\
+	     \tabitem \textcolor{purple}{patient} and \textcolor{teal}{rescuer} wear an appropriate helmet
+\\
+	     \tabitem Line construction with multiple backups made of core-sheath ropes\\
+	     \tabitem Sufficient fall height under the highline for stretching by weight of two persons\\
+	     \tabitem Terrestrial rescue equipment and an easily accessible highline stand \\
+	     \tabitem Sufficient personnel with knowledge at the anchorage for a terrestrial rescue \\
+	     \tabitem Increased preload in the highline to keep the relief path low \\
+	     \tabitem Pilot's awareness\\},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}. The sheathing prevents friction damage to the line. Damage caused by impact can be mitigated by the backups used. \\
+Injury to people caused by the falling rope cannot be ruled out, but immediate, rapid rescue can be prepared. \\
+The helmet offers head protection. A sufficient fall height can be planned for when setting up}]
+	     
+%3.2
+\fhaTable[fhaSystemKeyValue={helicopter},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.2},
+	     fhaCausesKeyValue={Tied-up helicopter steers the highline due to position fluctuations}, 
+	     fhaDescriptionKeyValue={During the lifting of the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} by the helicopter, relative movement with contact between the rope and the highline could occur for various reasons.\\
+	      This could cause friction damage to the Highline. Furthermore, the contact between line and rope could affect the control behavior of the helicopter.\\
+	       In the most serious case, the rope could have to be released (in this case see 2.1)}, 
+	     fhaMitigationKeyValue={\tabitem Abrasion-resistant coating of line and backups\\
+	     \tabitem Line construction with multiple backups made of core-sheath ropes},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as the sheath prevents friction damage to the line. Damage caused by hitting can be mitigated by the
+backups used.\\
+ Dropping the rope does not cause the \textcolor{teal}{rescuer} to fall}]
+
+%3.3
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={positioning (transl.)},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.3},
+	     fhaCausesKeyValue={Highline gets between \textcolor{teal}{rescuer} and \textcolor{purple}{patient} or abseiling device on rope gets caught in highline}, 
+	     fhaDescriptionKeyValue={When the helicopter lifts the highline, it can get between the \textcolor{purple}{patient} and the \textcolor{teal}{rescuer}.\\
+	      In this case, even after cutting the leash (next phase), free departure is not possible.\\
+	       If the abseiling system on the highline becomes caught during lifting, this leads to a complex load condition of the rope, leash and other components.}, 
+	     fhaMitigationKeyValue={\tabitem This situation can be easily prevented by creating a lateral distance of approximately one leash length between the rope and the highline before starting to lift\\
+	     \tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early by warning on the radio (air \textcolor{teal}{rescuer} too low)\\
+	     \tabitem If the situation cannot be resolved by the \textcolor{teal}{rescuer}, the \textcolor{purple}{patient} intervenes and lifts the highline above himself or
+the \textcolor{teal}{rescuer}. If the abseiling system threatens to get caught on the highline, the \textcolor{purple}{patient} pushes the rope and highline apart},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}, since it can be subsequently released by the flight \textcolor{teal}{rescuer} or \textcolor{purple}{patient} using a short leash (highline within grasping distance)}]
+
+%3.4
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={positioning (rot.)},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.4},
+	     fhaCausesKeyValue={The \textcolor{teal}{rescuer} and \textcolor{purple}{patient} are in contact, the downwash from the helicopter causes them to twist and thus the rope and
+leash to twist.\\
+ The \textcolor{teal}{rescuer} does not take adequate action.}, 
+	     fhaDescriptionKeyValue={Even if the \textcolor{teal}{rescuer} is not positioned too low below the \textcolor{purple}{patient}, the leash and rope can become twisted.\\
+	      During the maneuver, the flight \textcolor{teal}{rescuer} should prevent this in order to avoid an unwanted restraint situation.}, 
+	     fhaMitigationKeyValue={\tabitem By positioning the helicopter approximately one leash length in horizontal distance between line and rope,\\
+	      the rope situation becomes clearer and twisting is effectively prevented\\
+	     \tabitem If there is no reaction from the \textcolor{teal}{rescuer}, the \textcolor{purple}{patient} grabs the highline and prevents twisting\\
+	     \tabitem \textcolor{purple}{patient} checks rope and highline for possible entanglement when lifting and warns early\\
+	     \tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early via radio warning\\},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}, as the \textcolor{purple}{patient} can intervene early and prevent twisting by grasping the highline.}]
+
+\newpage
+The flight rescuer's function of "hooking the patient belt into the rope" is no longer relevant in this and all subsequent
+phases. The function of "disconnecting the patient from the highline" must not be carried out in this phase, as otherwise
+the residual tension in the highline will generate a strong vertical oscillation that can lead to entanglement in the rope,
+\textcolor{purple}{patient}, flight \textcolor{teal}{rescuer}, or helicopter and must be avoided at all costs. If the flight \textcolor{teal}{rescuer} initiates the next phase (cutting
+the leash) too early, the \textcolor{purple}{patient} will intervene with early warning.\\
+
+
+Since cases 3.1 and 3.2 already deal with the release of the rope in this phase, it will not be explicitly listed again here.
+	     	     
+	     
+%3.5
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.5},
+	     fhaCausesKeyValue={Aerodynamic interaction of highline with helicopter downwash (rocking of the line in the wind)}, 
+	     fhaDescriptionKeyValue={By gradually relieving the load on the highline, the preload and thus the vibration behavior changes.\\
+	      This can cause the line to swing up during lifting due to the downwash, even though no swinging was observed in the previous phases.}, 
+	     fhaMitigationKeyValue={\tabitem If the swinging is too strong: Lower the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} to return to a stable position situation to come\\
+	     \tabitem Handle of \textcolor{teal}{rescuer} in highline for guiding and manually dampening the vibration \\
+	     \tabitem Short leash to ensure that the highline can be reached by the \textcolor{teal}{rescuer}\\
+	     \tabitem Sheathing of line and backup to prevent loops\\
+	     },
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as the formation of loops is prevented and the relief takes place gradually.\\
+ This means that any swinging can be noticed early (haptically) and can be actively dampened to a certain extent by the arm of the \textcolor{teal}{rescuer}.\\
+  In the event of uncontrollable swinging, a load can be placed on the highline to return it to a stable state.}]
+	     
+%3.6
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.6},
+	     fhaCausesKeyValue={Rockfall or other objects blown down by downwash}, 
+	     fhaDescriptionKeyValue={A falling stone, branch, carabiner, etc. is enough to cut the line under tension. As a result, the load that the highline was carrying is suddenly transferred to the helicopter.\\
+	      This can lead to a high control load for the pilot.}, 
+	     fhaMitigationKeyValue={\tabitem Cleaning the stands of loose stones and objects that could be thrown up\\
+	     \tabitem Prohibit actions near the highline that involve throwing/kicking off objects/etc.\\
+	     \tabitem Include pilot awareness/assessment
+	     },
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}. Very unlikely if the anchorages are cleaned sufficiently and the staff at the anchorages behave accordingly. In addition, the pilot can be prepared}]
+
+%3.7
+\fhaTable[fhaSystemKeyValue={Leash},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={3.7},
+	     fhaCausesKeyValue={Fall of two people in leash when releasing the rope}, 
+	     fhaDescriptionKeyValue={If the rope has to be released during this phase, the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} will fall into the patient's leash.\\
+	      The greatest potential fall load occurs at the highest point of the lift. This is the largest nominal load for the leash.}, 
+	     fhaMitigationKeyValue={\tabitem Avoid unnecessary lifting above the zero line (unloaded highline).\\
+	      This can be easily detected by the \textcolor{teal}{rescuer} due to the mobility of the leash ring \\
+	     \tabitem Avoid sharp objects on harnesses/clothing of \textcolor{teal}{rescuer} and \textcolor{purple}{patient}\\
+	     \tabitem Cutting tool for the leash cut remains secured in a holder\\
+	     \tabitem No unprotected, sharp objects on \textcolor{purple}{patient} and \textcolor{teal}{rescuer}},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}, but can easily be avoided by taking measures (use of suitable clothing and belts and appropriate caution).}]
+	     
+%3.8
+\fhaTable[fhaSystemKeyValue={belt},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{orange}{medium}},
+	     fhaNumberKeyValue={3.8},
+	     fhaCausesKeyValue={Fall of two people in leash when releasing the rope}, 
+	     fhaDescriptionKeyValue={If the rope has to be released in this phase, the \textcolor{teal}{rescuer} and \textcolor{purple}{patient} fall into the patient's leash.\\
+	      The rescuer's load path is via the sling into the belay loop of the patient's harness.\\
+	       The leash is usually tied parallel to the belay ring (threaded through the loops of the belt part and the leg part of the harness, as when directly tying in a climbing rope).}, 
+	     fhaMitigationKeyValue={\tabitem In phase 2: Hook the sling into the leash's attachment loop and into the patient belt's attachment ring.\\
+	      If only one is possible: Hook it into the leash's attachment loop.},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}. Can be controlled very well through communication and the 4-eyes principle. However, a suitable communication
+channel is a prerequisite.}]
+
+\subsection{Phase 4: Cutting the Leash}
+\label{sec:fha:phase4}
+This phase begins with the handling of the tool for cutting the leash. Errors that arise from direct problems when cutting
+the leash are listed in the leash system.
+
+%4.1
+\fhaTable[fhaSystemKeyValue={helicopter},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.1},
+	     fhaCausesKeyValue={(Temporary) performance deficit of the helicopter}, 
+	     fhaDescriptionKeyValue={An unintentional loss of height during the cutting process of the leash can lead to an unintentional load on a leash that has already been cut.\\
+	      From this point on, the highline is no longer a serious fall protection device for \textcolor{teal}{rescuer} and \textcolor{purple}{patient}.}, 
+	     fhaMitigationKeyValue={	     \tabitem Leash shorter than arm length to ensure accessibility \\
+	     \tabitem Stay in this phase as short as possible -> quick, safe cut\\
+	     \tabitem \textcolor{purple}{patient} with a second pair of scissors ready to help out if necessary\\
+	     \tabitem Cut resistance of the sheath line and the backups to prevent damage to exclude\\
+	     \tabitem The \textcolor{purple}{patient} has a self-belay loop that can be hooked into the leash ring if necessary and the highline functions
+as a fall protection device. After that, dropping the rope no longer leads to a fall\\
+	     \tabitem Sufficient fall height under the highline for stretching by weight of two persons \\
+	     \tabitem Terrestrial rescue equipment and an easily accessible highline stand \\
+	     \tabitem Sufficient personnel with knowledge at the anchorage for a terrestrial rescue},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}. A problem with the helicopter during this phase can have fatal consequences if it occurs unannounced.\\
+ With a little time, a safe connection to the highline can be re-established}]
+	     
+%4.2
+\fhaTable[fhaSystemKeyValue={helicopter},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{orange}{medium}},
+	     fhaNumberKeyValue={4.2},
+	     fhaCausesKeyValue={Tied-up helicopter steers the highline due to position fluctuations}, 
+	     fhaDescriptionKeyValue={The relaxed line can easily be deflected in all directions. However, after the leash is cut, it swings back to its zero position. \\
+	     This could cause it to get caught on the \textcolor{teal}{rescuer} or \textcolor{purple}{patient}}, 
+	     fhaMitigationKeyValue={\tabitem Abrasion-resistant coating of line and backups to avoid loops\\
+	     \tabitem As little lateral deflection of the highline as possible when lifted by the helicopter},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}. The sheath makes tangling less likely and only one strand (by covering) be checked for entanglements.}]
+
+%4.3
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={positioning (transl.)},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.3},
+	     fhaCausesKeyValue={Flight \textcolor{teal}{rescuer} and \textcolor{purple}{patient} close to line, thus entanglement possible and consequently tied up, situation not resolved after cut.}, 
+	     fhaDescriptionKeyValue={Before cutting the leash, the \textcolor{purple}{patient} and the flight \textcolor{teal}{rescuer} should be approximately one leash length away from the highline.\\
+	     This makes it easy to see whether there is currently a second connection between the \textcolor{teal}{rescuer} or the \textcolor{purple}{patient} outside of the leash and the line.\\
+	      If this is the case, this connection must be broken before cutting the leash.\\
+	       If the \textcolor{teal}{rescuer} does not create such a distance by positioning the helicopter, the risk of becoming entangled after the cut is increased.
+}, 
+	     fhaMitigationKeyValue={\tabitem This situation can be easily prevented by creating a lateral distance of approximately one leash length between the rope and the highline before starting to lift.\\
+	     \tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early by giving a warning on the radio if no lateral distance has been created by
+the \textcolor{teal}{rescuer} or if an unwanted second connection exists.\\
+\tabitem  If a second connection exists and cannot be released by the flight \textcolor{teal}{rescuer}, the \textcolor{purple}{patient} intervenes and releases
+the second connection in consultation with the flight \textcolor{teal}{rescuer}.},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}, since the lateral distance to the highline provides a good overview of the existing connections and a pair of
+scissors for the \textcolor{purple}{patient} and \textcolor{teal}{rescuer} creates a large area in which unwanted connections can be cut.}]
+
+%4.4
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={positioning (rot.)},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.4},
+	     fhaCausesKeyValue={Downwash can twist \textcolor{teal}{rescuer} and \textcolor{purple}{patient}, which can result in a tied-up situation even after a cut of the leash (friction
+of the leash on the rope due to wrapping)}, 
+	     fhaDescriptionKeyValue={If the leash is twisted or caught in the descender of the variable rope (multiple times), the helicopter is tied up even after the leash has been cut.\\
+	      These connections can be very difficult or even impossible to release due to the existing tension on the ropes.}, 
+	     fhaMitigationKeyValue={\tabitem By positioning the helicopter approximately one leash length in horizontal distance between line and rope, the rope situation becomes clearer and twisting is effectively prevented \\
+	     \tabitem If there is no reaction from the \textcolor{teal}{rescuer}, the \textcolor{purple}{patient} grabs the highline and prevents twisting (the leash length is
+adjusted accordingly)\\
+\tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early via radio warning},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}, as the \textcolor{purple}{patient} can intervene early and prevent twisting by grasping the highline.}]
+	     
+%4.5
+\fhaTable[fhaSystemKeyValue={\textcolor{teal}{rescuer}},
+		 fhaFunctionKeyValue={dissolving the connection Patient with Highline},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.5},
+	     fhaCausesKeyValue={The flight \textcolor{teal}{rescuer} cuts the leash before all other (unwanted) connections of the \textcolor{purple}{patient} to the highline are released.}, 
+	     fhaDescriptionKeyValue={For example, by looping a highline backup around the patient's foot, the helicopter would remain tied up.\\ 
+	     Furthermore, this connection could be particularly difficult to release after the leash has been cut}, 
+	     fhaMitigationKeyValue={\tabitem By positioning the helicopter approximately one leash length horizontally between the line and the rope, the rope situation becomes clearer and unwanted connections are easier to identify\\
+	     \tabitem \textcolor{purple}{patient} and \textcolor{blue}{observer} check whether \textcolor{purple}{patient}, \textcolor{teal}{rescuer} or rope have unwanted connections before \textcolor{teal}{rescuer} reaches for the scissors\\
+	     \tabitem \textcolor{blue}{observer} and \textcolor{purple}{patient} intervene early via radio warning},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as 6 eyes check for unwanted connections. At the same time, this phase of the rescue process should be
+deliberately kept short.\\
+ This requires early start of the check by \textcolor{purple}{patient} and \textcolor{blue}{observer} and rapid warning.}]
+
+%4.6
+\fhaTable[fhaSystemKeyValue={dew},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.6},
+	     fhaCausesKeyValue={Helicopter has to release rope}, 
+	     fhaDescriptionKeyValue={If the leash has already been cut, releasing the rope without warning would be fatal.}, 
+	     fhaMitigationKeyValue={\tabitem Leash shorter than arm length\\
+	     \tabitem \textcolor{purple}{patient}/\textcolor{teal}{rescuer} can grab Line with arm.\\
+	     \tabitem \textcolor{purple}{patient}/\textcolor{teal}{rescuer} has self-belay loop ready for emergency securing\\
+	     \tabitem \textcolor{purple}{patient}/\textcolor{teal}{rescuer} has a stable communication connection to the helicopter\\
+	     \tabitem There is enough time to attach a stable safety device},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}. Depending on the advance warning time, this still represents a critical moment.\\ 
+Whether a fuse can be attached in time depends on the advance warning time available.}]
+	     
+%4.7
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={positioning},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.7},
+	     fhaCausesKeyValue={Aerodynamic interaction of highline with helicopter downwash (rocking of the line in the wind)}, 
+	     fhaDescriptionKeyValue={If the highline swings up due to the downwash when the weight is off, the \textcolor{teal}{rescuer} cannot manually dampen it because he needs his hands to cut the leash.\\
+	      This swing can interfere with cutting or make it very difficult.}, 
+	     fhaMitigationKeyValue={\tabitem \textcolor{purple}{patient} undertakes manual steaming if necessary\\
+	     \tabitem Helicopter can create a slight lateral deflection of the highline to keep \textcolor{teal}{rescuer} and \textcolor{purple}{patient} out of the range of movement of the swinging highline. \\
+	     \tabitem Short leash to ensure that the highline can be reached by the \textcolor{teal}{rescuer}\\
+	     \tabitem Sheathing of line and backup to prevent loops},
+	     fhaCritPostKeyValue={
+\textcolor{orange}{medium}, as loop formation is prevented. \textcolor{purple}{patient} can manually dampen line.\\
+ It is also possible to change the position of the helicopter sideways to the line until the leash is slightly taut.}]
+%4.8
+\fhaTable[fhaSystemKeyValue={Highline},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={small amount},
+	     fhaNumberKeyValue={4.8},
+	     fhaCausesKeyValue={Rockfall or other objects blown down by downwash}, 
+	     fhaDescriptionKeyValue={A falling stone, branch, carabiner, etc. is enough to cut the line under tension. In this phase, the highline is no longer the load-bearing system.\\
+	      This means that it is less susceptible to breaking through. The removal of the highline, which is no longer load-bearing, is not considered to have any influence.}, 
+	     fhaMitigationKeyValue={\tabitem Cleaning the stands of loose stones and objects that could be thrown up\\
+	     \tabitem Prohibit actions near the highline that involve throwing/kicking off objects/etc.},
+	     fhaCritPostKeyValue={
+\textcolor{green}{low}. Very unlikely if the anchorages are cleaned sufficiently and the staff at the stands behave accordingly.\\
+ In addition, the load transfer to the helicopter rope is completed in this phase.}]
+
+%4.9
+\fhaTable[fhaSystemKeyValue={Leash},
+		 fhaFunctionKeyValue={load transfer},
+	     fhaCritPreKeyValue={
+\textcolor{red}{high}},
+	     fhaNumberKeyValue={4.9},
+	     fhaCausesKeyValue={Anything that can cause delays when cutting the leash, e.g. the scissors falling down, poor cutting performance, adverse conditions when cutting, etc.}, 
+	     fhaDescriptionKeyValue={In this phase, the “load transfer” function of the leash is deliberately destroyed by cutting}, 
+	     fhaMitigationKeyValue={\tabitem Only start the cutting process when the conditions are favorable for a quick cut\\
+	     \tabitem Only use a simple leash that can be easily cut\\
+	     \tabitem Second pair of scissors ready for \textcolor{purple}{patient}. Good communication in case the cut goes wrong\\
+	     \tabitem If problems persist, attach the emergency safety device early and stop consider \\},
+	     fhaCritPostKeyValue={
+\textcolor{red}{high}. With two people ready to cut + good communication -> good opportunity to keep this process safe and short.}]
+
+\newpage 
+The failure analysis of the belt in this phase is not discussed separately, since no exceptional
+load case is known.
+
+\subsection{Phase 5: Removal}
+\label{sec:fha:phase5}
+
+After successfully completing Phase 4, the load-bearing path is limited to the heli, rope and harnesses alone. In general, the operations in this phase are considered equivalent to a climber rescue.\\
+For the sake of completeness, however, it should be mentioned again that backup loops, if present, can be inadvertently wrapped around the extremities or equipment of the \textcolor{teal}{rescuer} and \textcolor{purple}{patient}. This is a critical case due to the potentially difficult dissolution and the resulting consequences. In this analysis, however, a sheathing of the line and the backups is planned. This means that this difficult-to-control danger can be eliminated from the real scenario for an exercise.
+
+
 \section{Modified highline setup for training}
 \label{sec:modified}
 
+The usual structure of a highline already results in a very high safety standard. As described in Chapter 3, the simple redundancy in each individual component is absolutely sufficient for normal use. Nevertheless, for the special case of the planned exercise scenario, we propose a special structure that deviates from the usual structure by adding additional safety components in order to exclude or minimize the safety concerns already discussed as best as possible.\\
+For the special protection of the line and the backup, these are threaded through a 9m long fire hose, which is positioned in the middle of the line in the area of the \textcolor{purple}{patient}. In addition to strong abrasion protection in the event of contact between the rope/air \textcolor{teal}{rescuer} and the line, the hose also protects against falling parts, e.g. in the event of the
+
+In addition, the loops of the non-tensioned, redundant backup ropes are covered, which prevents entanglement in these
+loops as best as possible.\\
+In order to cope with the potentially greater forces acting on the entire system than in normal cases (2 people in the line; in the worst case, dynamic fall of two people including the rope into the line; lateral deflection by helicopter), the anchor points are set up with sufficient safety reserves. Instead of three 10mm bolts, four 12mm bolts are used at the western
+anchor point and a compensating anchor is set up on 4 healthy trees (trunk diameter approx. 30cm) at the eastern anchor point. A particularly strong, certified highline fabric is used as the mainline (probably RedTube, Slacktivity, minimal breaking strength 36.9kN). For double redundancy in the event of a mainline failure, the backup system is set up using two separate
+core-sheath ropes. In addition to sufficient strength, these offer a higher level of safety in the event of cutting edge loads from stones at the anchor point or sharp-edged material from the air \textcolor{teal}{rescuer}/\textcolor{purple}{patient}. \\
+
+Instead of just one leash ring as a connection between the leash and the line/backup, two tested leash rings are used to ensure redundancy in the very unlikely event of a material failure of one ring.
+
+To secure the \textcolor{purple}{patient} on the line, only one strand of new climbing rope is used instead of a normal leash (climbing rope
+threaded into a hose band). Cutting the leash is made much more difficult by the movable hose band above the rope and carries the risk of the safety not being completely severed, which creates the very critical situation of the helicopter being tied up without a secure connection between the flight \textcolor{teal}{rescuer}/\textcolor{purple}{patient} and the line in the event of the rope being released. By using a single climbing rope, the situation is comparable to a climber's rescue from a rope.
+
 \section{Resulting procedure for training}
 \label{sec:result}
+
+Based on the error analysis, some positions in the procedure can be identified that should be expanded to increase
+the safety of those involved during the exercise. The assumed procedure from Chapter 2 is repeated below.
+Further coordination/elaboration with pilots and air \textcolor{teal}{rescuer}s and further adjustments are explicitly
+desired.
+
+\begin{landscape}
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{ l | l | l | l | l }
+ rescue phase & special feature through exercise scenario & tasks of \textcolor{teal}{rescuer} & \textcolor{purple}{patient} Tasks & Tasks \textcolor{blue}{observer} \\ 
+ \hline
+ \hline 
+ 0. Preperation & \tabitem Testing the radio connection \tabitem willingness of all officials \tabitem Material is to ensure & \tabitem test radio connection \tabitem test leash knots \tabitem check scissors available & \tabitem test radio connection  \tabitem accessibility of the Highline by hand while hanging \tabitem Self-belay loop available and long enough \tabitem cutting scissors available and easily accessible & \tabitem test radio connection  \tabitem unobstructed view on rescue operations  \tabitem \textcolor{purple}{patient} countercheck \\
+  \hline
+  
+ 1. Approach and positioning of the helicopter with rescue device and sling on rope & \textcolor{purple}{patient} and \textcolor{blue}{observer} grab if wrong approach or other error cases & Abseilcheck variables Rope, helicopter guidance, patient embracing, rope hygiene between rope, highline and leash & readiness signal, check approach & readiness signal, check approach \\
+  \hline
+  
+ 2. Hanging the patient in cross-cut loop & Leash is shorter than usual, backup loops Highline are not fixed & Secure attachment of the patient belt in sling, Rope hygiene between rope, highline and leash &  Check if the sling is correctly in your harness hung, ensures that the phases are adhered to and warns FR in case of errors. If not released, intervenes by flight \textcolor{teal}{rescuer} & Monitored helicopter position relative to Highline, Warns in case of errors, gives external assessment about termination \\
+  \hline
+  
+ 3. Lifting by helicopter to the highline is relieved (load transfer) & Highline has no fixed backup loops in the exercise scenario & Know helicopter one to relieve the Highline and production of a horizontal distance from one leash length to the highline. Check whether there are any unplanned connections with the highline. Completed lifting by helicopter when the highline reaches its neutral position. Dampens any swinging up the Highline manually & Check if there are any unplanned connections with the Highline. Make sure to comply with the phases and warns FR in case of errors. & Monitored helicopter position relative to the highline, checks whether unplanned connections with the Highline passes, warns in case of errors, gives external assessment about termination \\
+  \hline
+4. Cutting the leash (connection of climbing harness to highline & The structure of the leash is modified to include short residence time in this phase. After cutting, the connection can be reestablished by means of a selfbelay loop on the patient (if highline is accessible). In case of failure/loss of a pair of scissors, the \textcolor{purple}{patient} is also covered by a equipped & Disconnects the patient belt from the highline in the neutral position of the highline. Checks
+before cutting whether there is an unwanted connection or rescue equipment is caught on the highline. & Monitors whether FR only cuts the leash at the neutral point of the highline. Checks before cutting whether there is an unwanted connection or Rescue equipment is attached to the highline. Holds a second pair of scissors and self-protection ready & Monitors whether FR only cuts the leash at the neutral point of the highline. Checks before cutting whether there is an unwanted connection or Rescue equipment is attached to the highline.\\
+  \hline
+  
+5. Removal & No & Know helicopter a, regulated departure from station & no & no\\
+ \hline
+
+   
+\end{tabular}
+\label{tab:exercise}
+\end{table}
+
+\end{landscape}
+
 
 \end{document}
