@@ -9,6 +9,7 @@
 \usepackage{nicematrix}
 \usepackage{xkeyval}
 \usepackage{pdflscape}
+\usepackage{longtable}
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
@@ -1148,13 +1149,33 @@ desired.
 
 \begin{landscape}
 
-\begin{table}[!ht]
-\centering
-\begin{tabular}{ l | l | l | l | l }
+\begin{longtable}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+ \hline
  rescue phase & special feature through exercise scenario & tasks of \textcolor{teal}{rescuer} & \textcolor{purple}{patient} Tasks & Tasks \textcolor{blue}{observer} \\ 
  \hline
  \hline 
- 0. Preperation & \tabitem Testing the radio connection \tabitem willingness of all officials \tabitem Material is to ensure & \tabitem test radio connection \tabitem test leash knots \tabitem check scissors available & \tabitem test radio connection  \tabitem accessibility of the Highline by hand while hanging \tabitem Self-belay loop available and long enough \tabitem cutting scissors available and easily accessible & \tabitem test radio connection  \tabitem unobstructed view on rescue operations  \tabitem \textcolor{purple}{patient} countercheck \\
+ 0. Preperation & 
+ \begin{itemize}
+    \item Testing the radio connection
+    \item willingness of all officials
+    \item Material is to ensure
+  \end{itemize} & 
+   \begin{itemize}
+    \item test radio connection
+    \item test leash knots
+    \item check scissors available
+  \end{itemize} & 
+   \begin{itemize}
+    \item test radio connection
+    \item accessibility of the Highline by hand while hanging
+    \item Self-belay loop available and long enough
+    \item  cutting scissors available and easily accessible
+  \end{itemize} & 
+   \begin{itemize}
+    \item test radio connection
+    \item unobstructed view on rescue operations
+    \item \textcolor{purple}{patient} countercheck
+  \end{itemize} \\
   \hline
   
  1. Approach and positioning of the helicopter with rescue device and sling on rope & \textcolor{purple}{patient} and \textcolor{blue}{observer} grab if wrong approach or other error cases & Abseilcheck variables Rope, helicopter guidance, patient embracing, rope hygiene between rope, highline and leash & readiness signal, check approach & readiness signal, check approach \\
@@ -1165,19 +1186,19 @@ desired.
   
  3. Lifting by helicopter to the highline is relieved (load transfer) & Highline has no fixed backup loops in the exercise scenario & Know helicopter one to relieve the Highline and production of a horizontal distance from one leash length to the highline. Check whether there are any unplanned connections with the highline. Completed lifting by helicopter when the highline reaches its neutral position. Dampens any swinging up the Highline manually & Check if there are any unplanned connections with the Highline. Make sure to comply with the phases and warns FR in case of errors. & Monitored helicopter position relative to the highline, checks whether unplanned connections with the Highline passes, warns in case of errors, gives external assessment about termination \\
   \hline
-4. Cutting the leash (connection of climbing harness to highline & The structure of the leash is modified to include short residence time in this phase. After cutting, the connection can be reestablished by means of a selfbelay loop on the patient (if highline is accessible). In case of failure/loss of a pair of scissors, the \textcolor{purple}{patient} is also covered by a equipped & Disconnects the patient belt from the highline in the neutral position of the highline. Checks
-before cutting whether there is an unwanted connection or rescue equipment is caught on the highline. & Monitors whether FR only cuts the leash at the neutral point of the highline. Checks before cutting whether there is an unwanted connection or Rescue equipment is attached to the highline. Holds a second pair of scissors and self-protection ready & Monitors whether FR only cuts the leash at the neutral point of the highline. Checks before cutting whether there is an unwanted connection or Rescue equipment is attached to the highline.\\
+  
+4. Cutting the leash (connection of climbing harness to highline & The structure of the leash is modified to include short residence time in this phase. After cutting, the connection can be reestablished by means of a selfbelay loop on the patient (if highline is accessible). In case of failure/loss of a pair of scissors, the \textcolor{purple}{patient} is also covered by a equipped & Disconnects the patient belt from the highline in the neutral position of the highline. Checks before cutting whether there is an unwanted connection or rescue equipment is caught on the highline. & Monitors whether FR only cuts the leash at the neutral point of the highline. Checks before cutting whether there is an unwanted connection or Rescue equipment is attached to the highline. Holds a second pair of scissors and self-protection ready & Monitors whether FR only cuts the leash at the neutral point of the highline. Checks before cutting whether there is an unwanted connection or Rescue equipment is attached to the highline.\\
   \hline
   
 5. Removal & No & Know helicopter a, regulated departure from station & no & no\\
  \hline
 
    
-\end{tabular}
+\end{longtable}
 \label{tab:exercise}
-\end{table}
 
 \end{landscape}
+
 
 
 \end{document}
