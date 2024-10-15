@@ -1,10 +1,34 @@
-This is the versioning page for collaboration on the `Highline-Rescue-Project`. 
+# Highline Rescue Project
 
-After a successful rescue training of a patient off a highline developed by Lukas Irmler, Aaron Benkert and Jakob Bludau in collaboration with Heli Austria.  The results of the ~30 flown longline rescue trainings  were presented at ICAR 2023. This started this project as a discussion with panel members that were interested in transfering the procedure to a hoist based rescue. The Bergwacht Bayern, and the authors agreed to collaborate with the German Police to investigate the contact of highine and hoist cable. This is targeted to form a starting point for discussing if a highline resuce can be performed with a hoist equipped helicopter. The main concern is the cutting load the ~4mm hoist cable can present to the highline.
+## What is the project trying to achieve? 
 
-This repository will also host the documents that were created before the start of this project. These documents are currently in translation. Only english versions will be hosted here.
+This project tries to investigate if a helicopter-based rescue of a single patient directly off a highline can be done safely. If a safe procedure for a helicopter-based rescue can be found, it can shorten the time-to-hospital for a patient on a highline. This is especially relevant due to suspension trauma developing after prolonged hanging in a harness. 
 
-For videos on the longline rescue refer to:
+## What already happened in the project
+
+Lukas Irmler, Aaron Benkert, and Jakob Bludau started with the question if a helicopter-based rescue of a patient directly off a highline would be possible. After formulating the first [`Functional Hazard Analysis`](https://github.com/JBludau/Highline-Rescue-Project/blob/main/documents/helikopter_rettung_fha_v2.0_german.pdf) to investigate the risk associated with a rescue, the authors discussed the findings with HeliAustria. This lead to the conception of experiments for a fist investigation of a helicopter-based rescue.
+
+### Longline experiments with HeliAustria
+
+The first experiments were conducted using a longline. The textile material of the longline was suspected to pose less thread of cutting the highline. The highline was constructed in a special way, as stated in the [`Functional Hazard Analysis`](https://github.com/JBludau/Highline-Rescue-Project/blob/main/documents/helikopter_rettung_fha_v2.0_german.pdf). This allowed for ~30 successful (2 terminated as early measure without problems) longline rescues of a patient off a highline.
+The taken video material is available on youtube.  
 [Technical video of rescue](https://www.youtube.com/watch?v=iLqlUBwQ1ak)
 [Technical video of risks](https://www.youtube.com/watch?v=SlgHOHsWXp8)
-[Description of the previous project](https://www.youtube.com/watch?v=puFq4TgSw14)
+[Description of the first project](https://www.youtube.com/watch?v=puFq4TgSw14)
+
+### Presentation at ICAR 2023
+
+After the longline experiments with HeliAustria, the results were [presented at ICAR2023](https://github.com/JBludau/Highline-Rescue-Project/blob/main/presentations/icar_2023_highline_rescue_longline.pdf). In the discussion in the plenary after the presentation, it was mentioned, that most of the helicopter rescue operators are not using longlines but rescue hoists in their standard operating procedures. Nevertheless, the authors suspected the thin hoist cable to pose a danger of damaging or even cutting the highline.  
+
+### Hoist cable vs highline test
+
+During ICAR2023, the authors teamed up with with Raed Slacklines and the Bergwacht Bayern to collaborate on investigating the danger in a contact of a helicopter rescue hoist cable and conventional highline materials. The experiment, which was done using a 50m long highline and an original hoist cable showed, that the hoist cable does indeed pose a danger to the highline. The contact was established by having the helicopter hovering at a position that pushes the hoist cable onto the highline near the leash ring (attachment of the patient to the highline). In all 6 valid experiments the highline was cut by the hoist cable after few meters of hoisting while being in contact.
+Nevertheless, the study also included the contact between a climbing rope and the highline. As climbing rope did not cut the highline, even under a lot of relative movement between the two materials, a follow up experiment was planned.
+
+### Climbing rope vs highline
+
+In this experiment, the contact between a climbing rope and the highline is investigated explicitly. Therefore, ~5m highlines made from different matierals (polyamide, polyester, and dyneema) were brought in contact with a climbing rope. While keeping the contact on the same spot, the climbing rope was moved relatively to the highline. After 25 cylces a 2m up and 2m down, the highline material was tested for its breakting strength.
+
+### Presentation at ICAR 2024
+
+The results of the contact experiments are presented at ICAR2024 and will be uploaded to the project.
