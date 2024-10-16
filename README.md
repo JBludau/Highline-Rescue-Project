@@ -3,6 +3,9 @@
 ## What is the project trying to achieve? 
 
 This project tries to investigate if a helicopter-based rescue of a single patient directly off a highline can be done safely. If a safe procedure for a helicopter-based rescue can be found, it can shorten the time-to-hospital for a patient on a highline. This is especially relevant due to suspension trauma developing after prolonged hanging in a harness. 
+Therefore, we started some experiments with a longline in collaboration with HeliAustria. Furhtermore, we investigated the cutting resistance of the highlineline in a realistic highline-rescue setting with a hoist cable in collaboration with the Bergwacht Bayern.
+The preliminary results of our experiments, which will be presented at the ICAR 2024 and shortly on this website, showed a substantial risk in contact with the hoist cable.
+Since then, we identified a climbing rope to pose minimal danger of cutting the highline and started investigating the damage inflicted by contact of the two.
 
 ## What already happened in the project
 
