@@ -32,3 +32,4 @@ In this experiment, the contact between a climbing rope and the highline is inve
 ### Presentation at ICAR 2024
 
 The results of the contact experiments are presented at ICAR2024 and will be uploaded to the project.
+The english translation of the [`Functional Hazard Analysis`](https://github.com/JBludau/Highline-Rescue-Project/blob/main/documents/helicopter_rescue_fha_2.0_english.pdf) is available for download.
