@@ -65,22 +65,26 @@ if __name__ == "__main__":
     #mechanical parameters
     Lengths_pink = [30,40,60,80,100,120,160,200]
     Modulus_pink = 30000
-    Lengths_y2k = [60,80,100,120,160,200,300,400]
-    Modulus_y2k = 420000
+    Lengths_y2k = [45]
+    #  Modulus_y2k = 420000
+    Modulus_y2k = 500000
 
     #athlete related parameters (out of center)
-    positions = [0.2,0.3,0.4,0.5]
-    weights = [60,80,100,120]
+    #  positions = [0.2,0.3,0.4,0.5]
+    positions = [0.2]
+    weights = [70]
 
     #heli related parameters
-    heli_y=[1,2,3,4,5,6,7,8,9,10]
-    heli_z=[3,5,7,9,11,13,15,17,19,21,24,27,30]
+    #  heli_y=[1,2,3,4,5,6,7,8,9,10]
+    heli_y=[2]
+    heli_z=[4.5]
     F_R = 100*9.81
 
     #highline related parameters
     Modulus = Modulus_y2k
     Lengths = Lengths_y2k
-    PreTensions=[500,1000,1500,2000,2500,3000,3500]
+    #  PreTensions=[500,1000,1500,2000,2500,3000,3500]
+    PreTensions=[3080]
 
     #output config
     base_name = 'results_y2k'
