@@ -30,7 +30,7 @@ Nevertheless, the study also included the contact between a climbing rope and th
 
 ### Presentation at ISA 2024
 
-The results of the cable vs highline contact experiments were presented to the highline community at the ISA Safety Meeting 2024. The presentation can be found [here](https://github.com/JBludau/Highline-Rescue-Project/tree/main/presentations/ISA_2024_highline and helicpter rescue.pdf)
+The results of the cable vs highline contact experiments were presented to the highline community at the ISA Safety Meeting 2024. The presentation can be found [here](https://github.com/JBludau/Highline-Rescue-Project/tree/main/presentations/ISA_2024_highline_and_helicpter_rescue.pdf)
 
 ### Climbing rope vs highline
 
